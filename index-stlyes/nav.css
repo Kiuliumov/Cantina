@@ -1,13 +1,12 @@
 nav{
     background-color: #393333;
     box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 1em;
-    border-bottom-right-radius: 1em;
 }
 
 nav .container{
     display: flex;
     padding: 1em;
+    justify-content: space-between;
 }
 
 .menu-icon{
@@ -18,7 +17,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4em;
+    gap: 5em;
     width: 100vw;
 }
 
@@ -62,15 +61,18 @@ nav ul li:hover {
         top: 60px;
         left: 0;
         background-color: #393333;
-        border-radius: 0 0 1em 1em;
         box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.1);
         margin-top: 1em;
         padding: 4em;
     }
 
     nav .menu-icon {
-        display: block;
+        display: flex;
         cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        color: white;
     }
 
     nav .menu-icon span {
@@ -90,7 +92,7 @@ nav ul li:hover {
     }
 
     nav ul.active {
-        display: flex;
+        display: flex;        
     }
 
     nav img {
