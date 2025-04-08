@@ -64,6 +64,7 @@ nav ul li:hover {
         box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.1);
         margin-top: 1em;
         padding: 4em;
+        z-index: 9999;
     }
 
     nav .menu-icon {
@@ -98,4 +99,5 @@ nav ul li:hover {
     nav img {
         display: none;
     }
+
 }

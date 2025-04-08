@@ -12,9 +12,8 @@ main img {
 main .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 3em 5em;
-    gap: 3em;
     flex-wrap: wrap;
 }
 
@@ -23,12 +22,6 @@ main .image-container {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 15px 2px, rgba(6, 24, 44, 0.65) 0px 4px 20px -1px, rgba(255, 255, 255, 0.08) 0px 1px 5px inset;
     border-radius: 15px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-main .image-container:hover {
-    transform: scale(1.05);
-    box-shadow: rgba(6, 24, 44, 0.6) 0px 0px 25px 3px, rgba(6, 24, 44, 0.75) 0px 4px 30px -1px, rgba(255, 255, 255, 0.1) 0px 1px 8px inset;
 }
 
 main .context {
@@ -38,14 +31,36 @@ main .context {
 }
 
 main .context h1 {
-    font-size: 3em;
+    font-size: 64px;
     margin-bottom: 0.5em;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
 main .context h2 {
-    font-size: 1.75em;
+    font-size: 32px;
     font-weight: normal;
     line-height: 1.4;
+}
+
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main .image-container,
+main .context {
+    opacity: 0;
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+main .context {
+    animation-delay: 0.3s;
 }
