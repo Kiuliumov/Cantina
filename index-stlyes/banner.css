@@ -1,6 +1,11 @@
+body{
+    background-color: #5f5959;
+}
+
 main {
     background-color: #5f5959;
     padding: 4em 0;
+    width: 100%;
 }
 
 main img {
