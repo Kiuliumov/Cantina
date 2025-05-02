@@ -48,3 +48,36 @@ footer p {
 }
 
 
+@media (max-width: 768px) {
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page-wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        padding: 2em 1em;
+        flex: 1;
+    }
+
+    .marquee-track {
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .marquee-track img {
+        max-height: 550px;
+        max-width: 80vw;
+        max-width: 500px;
+    }
+
+    footer {
+        padding: 1.5em 1em;
+    }
+}
