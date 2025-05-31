@@ -7,16 +7,36 @@ main {
   font-family: Arial, sans-serif;
 }
 
-.review-form-section {
-  background-color: #3d3636;
+.content-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 2rem;
+  box-sizing: border-box;
+  color: #99d6c4;
+
+  flex-wrap: nowrap;  /* Keep side-by-side */
+  height: 700px;      /* Fixed height container */
+}
+
+.review-form-section,
+.reviews-section {
+  flex: 1; /* Equal width */
+  background-color: #3d3636;
   border-radius: 0.5em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  margin-bottom: 3rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 2rem;
+  box-sizing: border-box;
   color: #99d6c4;
+
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.review-form-section {
+  overflow-y: visible; /* no scroll */
 }
 
 .review-form-section h2 {
@@ -60,6 +80,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 0;
+  overflow-y: visible; /* no scroll */
 }
 
 .review-form-section button {
@@ -88,16 +110,15 @@ main {
 }
 
 .reviews-section {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #99d6c4;
+  overflow-y: auto; /* Scrollable */
+  max-height: 100%;  /* Fill container height */
 }
 
 .reviews-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #99d6c4;
+  text-align: center;
 }
 
 .review {
@@ -131,6 +152,38 @@ main {
   line-height: 1.5;
   color: #99d6c4;
   white-space: pre-wrap;
+}
+
+.sort-controls {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sort-controls label {
+  color: #99d6c4;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.sort-controls select {
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #99d6c4;
+  border-radius: 5px;
+  background-color: #f5fdfb;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 180px;
+}
+
+.sort-controls select:hover,
+.sort-controls select:focus {
+  border-color: #4ecdc4;
+  box-shadow: 0 0 5px #4ecdc4;
+  outline: none;
 }
 
 #paginationControls {
@@ -173,10 +226,17 @@ main {
     padding: 1.5rem;
   }
 
+  .content-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    height: auto; /* Remove fixed height on small screens */
+  }
+
   .review-form-section,
   .reviews-section {
     max-width: 100%;
     padding: 1.5rem;
+    max-height: none;
   }
 
   .review-form-section h2,
