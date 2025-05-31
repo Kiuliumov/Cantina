@@ -1,0 +1,192 @@
+main {
+  flex: 1;
+  min-height: 700px;
+  background-color: #2f2a2a;
+  padding: 2rem;
+  color: #99d6c4;
+  font-family: Arial, sans-serif;
+}
+
+.review-form-section {
+  background-color: #3d3636;
+  padding: 2rem;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #99d6c4;
+}
+
+.review-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #99d6c4;
+  text-align: center;
+}
+
+.review-form-section label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #99d6c4;
+}
+
+.review-form-section input[type="text"],
+.review-form-section select,
+.review-form-section textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #544b44;
+  border-radius: 0.5em;
+  font-size: 1rem;
+  background-color: #4e4343;
+  color: #99d6c4;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.review-form-section input[type="text"]:focus,
+.review-form-section select:focus,
+.review-form-section textarea:focus {
+  border-color: #99d6c4;
+  background-color: #5a4f49;
+  outline: none;
+  color: #fff;
+}
+
+.review-form-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-form-section button {
+  background-color: #d6b899;
+  color: #2f2a2a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.review-form-section button:hover {
+  background-color: #99d6c4;
+}
+
+#formMessage {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  min-height: 1.2em;
+  color: #99d6c4;
+}
+
+.reviews-section {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #99d6c4;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #99d6c4;
+}
+
+.review {
+  background-color: #3d3636;
+  padding: 1.8rem 2rem;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.8rem;
+  color: #99d6c4;
+}
+
+.review h3 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.3rem;
+  color: #99d6c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.review h3 small {
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #a28c6d;
+  font-style: italic;
+}
+
+.review p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+  color: #99d6c4;
+  white-space: pre-wrap;
+}
+
+#paginationControls {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#paginationControls button {
+  background-color: #d6b899;
+  color: #2f2a2a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  margin: 0 0.4rem;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+#paginationControls button:disabled {
+  background-color: #7a6b57;
+  cursor: not-allowed;
+  color: #ccc;
+}
+
+#paginationControls button:hover:not(:disabled) {
+  background-color: #b69d77;
+}
+
+#paginationControls span {
+  font-weight: 600;
+  font-size: 1rem;
+  vertical-align: middle;
+  color: #d6b899;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+  }
+
+  .review-form-section,
+  .reviews-section {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .review-form-section h2,
+  .reviews-section h2 {
+    font-size: 1.6rem;
+  }
+
+  #paginationControls button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+  }
+}

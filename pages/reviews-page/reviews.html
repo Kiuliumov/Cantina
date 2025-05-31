@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cantina</title>
+    <link rel="icon" href="../images/title-icon-avatar.ico"image/x-icon">
+    <link rel="stylesheet" href="../../common-styles/common-styles-main.css">
+    <link rel="stylesheet" href="reviews-styles.css">
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="menu-icon" id="menu-toggle">
+                <span>&#9776;</span>
+                <h1>The Cantina</h1>
+            </div>    
+            <img src="../../images/The cantina logo.png" alt="">
+            <ul>
+                <li><a href="../../index.html"><p>Home</p></a></li>
+                <li><a href="../certifications-page/certifications.html"><p>Certifications</p></a></li>
+                <li><a href="../about-page/about.html"><p>About</p></a></li>
+                <li><a href="../contact-page/contacts.html"><p>Contacts</p></a></li>
+                <li><a href="../projects-page/project.html"><p>Projects</p></a></li>
+                <li><a href="#"></a>Reviews</li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <section class="review-form-section">
+        <h2>Write a Review</h2>
+        <form id="reviewForm">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="rating">Rating (1 to 5):</label><br>
+        <select id="rating" name="rating" required>
+            <option value="">Select rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select><br><br>
+
+        <label for="comment">Your Review:</label><br>
+        <textarea id="comment" name="comment" rows="5" required></textarea><br><br>
+
+        <button type="submit">Submit Review</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+
+    <section class="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div id="reviewsContainer"></div>
+    </section>
+    </main>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dimitur Kiuliumov. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../scripts/dropdown-responsive-nav.js"></script>
+    <script src="../../scripts/device-max-width-css.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>
