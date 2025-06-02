@@ -23,7 +23,7 @@ form.addEventListener('submit', async (e) => {
 
   if (!name || !email || !message) {
     formMessage.textContent = 'Please fill in all fields.';
-    formMessage.style.color = '#14e7a1';
+    formMessage.style.color = '#D14343';
     return;
   }
 
@@ -36,11 +36,11 @@ form.addEventListener('submit', async (e) => {
     });
 
     formMessage.textContent = 'Message sent successfully. Thank you!';
-    formMessage.style.color = 'green';
+    formMessage.style.color = '#2E7D32';
     form.reset();
   } catch (error) {
     console.error('Error sending message:', error);
     formMessage.textContent = 'There was an error sending your message. Please try again.';
-    formMessage.style.color = 'red';
+    formMessage.style.color = '#374151';
   }
 });
