@@ -1,14 +1,14 @@
-main{
+main {
     padding: 4em;
-    background-color: #2e2929;
+    background-color: #212A31; 
 }
-
 
 .certification-marquee {
     width: 100%;
     padding: 1rem 0;
-    border-top: 1px solid #756d6d;
-    border-bottom: 1px solid #918c8c;
+    border-top: 1px solid #748D92;  
+    border-bottom: 1px solid #D3D9D4;  
+    background-color: #2E3944; 
 }
 
 .marquee-track {
@@ -23,28 +23,12 @@ main{
 .marquee-track img {
     height: 500px;
     flex-shrink: 0;
-    filter: drop-shadow(0 0 5px #0ff);
+    filter: drop-shadow(0 0 5px #124E66); 
     transition: transform 0.3s;
 }
 
 .marquee-track img:hover {
     transform: scale(1.05);
-}
-
-footer{
-    background-color: rgb(30, 30, 30);
-    color: white;
-    padding: 2em 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-footer .container{
-    display: flex;
-    justify-content: center;
-}
-
-footer p {
-    opacity: 0.7;
 }
 
 

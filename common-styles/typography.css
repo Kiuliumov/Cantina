@@ -1,5 +1,14 @@
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('/fonts/Satoshi-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body{
-    font: 16px/1.5 'Lato', sans-serif;
+    font: 16px/1.5 'Satoshi', sans-serif;
 }
 
 a{

@@ -1,8 +1,9 @@
 :root {
-    --nav-bg: #393333;
-    --nav-link-bg: rgb(20, 231, 161);
-    --nav-link-hover-bg: #48e5c2;
-    --text-color: white;
+    --nav-bg: #212A31;
+    --nav-link-bg: #124E66;
+    --nav-link-hover-bg: #2E3944;
+    --text-color: #D3D9D4;
+    --nav-shadow: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -12,11 +13,13 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: #2E3944;
+    color: var(--text-color);
 }
 
 nav {
     background-color: var(--nav-bg);
-    box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1em 1em 0 var(--nav-shadow);
     width: 100vw;
     position: relative;
 }
@@ -35,6 +38,7 @@ nav img {
 
 .menu-icon {
     display: none;
+    color: var(--text-color);
 }
 
 nav ul {
@@ -58,6 +62,7 @@ nav ul li {
     margin: 0 0.5em;
     transition: transform 0.3s ease, background-color 0.3s ease;
     max-width: 200px;
+    color: var(--text-color);
 }
 
 nav ul li:hover {
@@ -76,7 +81,7 @@ nav ul li a {
 @media (max-width: 768px) {
     nav {
         border-radius: 0;
-        width: 100vw; 
+        width: 100vw;
     }
 
     nav img {
@@ -104,7 +109,7 @@ nav ul li a {
         width: 100vw;
         padding: 4em 1em;
         background-color: var(--nav-bg);
-        box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1em 1em 0 var(--nav-shadow);
         z-index: 9999;
     }
 
